@@ -3,7 +3,30 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import Header from './components/Header';
 import Character from './components/Character';
+import styled from 'styled-components';
 
+const StyledCharacters = styled.div`
+  font-size: 2rem;
+  line-height: 50px;
+  background-color: white;
+  margin: 0 30%;
+  border-radius: 10%;
+  background-color: white;
+  opacity: .8;
+
+  button {
+    margin-left: 20px;
+    border-radius: 999px;
+    position: relative;
+    bottom: 6px;
+    background-color: grey;
+    color: white;
+   &:hover{
+    background-color: orange;
+    color: white;
+    }
+  }
+`
 
 
 const App = () => {
