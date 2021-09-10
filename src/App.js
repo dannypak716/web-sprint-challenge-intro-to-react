@@ -40,7 +40,18 @@ const App = () => {
   )
 
   return (
-    
+    <div className="App">
+      <Header />
+      <StyledCharacters className='huh'>
+        {charactersData.map( char => {
+          return <CharDetail key={char.url} info={char}/>
+        })
+        }
+      </StyledCharacters>
+      {
+        currentURL && <Character currentURL={currentURL} close={closeDetails} />
+      }
+    </div>
   );
 }
 
